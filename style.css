@@ -1,0 +1,114 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+body {
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(144, 205, 255),
+    rgb(30, 253, 186)
+  );
+  overflow: hidden;
+}
+.calculator {
+  border-radius: 12px;
+  box-shadow: 15px 15px 40px 0px rgba(0, 0, 0, 0.295);
+  overflow: hidden;
+}
+
+.calculator__display {
+  border: 0.5px solid rgb(185, 185, 185);
+  background-color: whitesmoke;
+  color: teal;
+  font-size: 2.5em;
+  padding: 0.3em 0.15em;
+  text-align: right;
+  overflow: hidden;
+}
+
+.calculator__keys {
+  display: grid;
+  grid-template-columns: [first] 25% [second] 25% [third] 25% [fourth] 25% [end];
+  grid-template-rows: [one] 20% [two] 20% [three] 20% [four] 20% [five] 20% [end];
+}
+.calculator__keys .key--equal {
+  grid-column: 4 / span 1;
+  grid-row: four / end;
+}
+.calculator__keys .AC {
+  grid-column: 4 / span 1;
+  grid-row: two / 4;
+}
+.calculator__keys #zero-bttn {
+  grid-column: first / span 2;
+  grid-row: five / end;
+}
+
+.calculator__keys > * {
+  font-family: "Roboto Mono", monospace;
+  background-color: whitesmoke;
+  font-size: 1em;
+  padding: 1.5em 2em;
+  border: 0.5px solid rgb(185, 185, 185);
+}
+.key--operator {
+  background-color: rgb(226, 226, 226);
+}
+.key--equal,
+.AC,
+.zero-bttn,
+.dot {
+  background-color: rgb(255, 173, 118);
+}
+.example_c:hover {
+  color: #ffffff !important;
+  background: #f6b93b;
+  border-color: #f6b93b !important;
+  transition: all 0.4s ease 0s;
+}
+
+button:hover {
+  color: #ffffff !important;
+  background: #f6b93b;
+  border-color: #f6b93b !important;
+  transition: 0.2s ease 0s;
+}
+button:active {
+  background-color: teal;
+  transition: none;
+}
+footer h1 {
+  font-size: 0.8rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-right: 15px;
+}
+footer h1 span {
+  margin: auto;
+  font-size: 1.2rem;
+  font-family: "Pacifico", cursive;
+  font-weight: 200;
+}
+.is-depressed {
+  background-color: #f6b93b;
+}
